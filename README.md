@@ -32,27 +32,10 @@ Para criar a máquina virtual Vagrant, execute o comando:
 
 `vagrant up`
 
-Caso sua máquina tenha mais de uma placa de rede, o Vagrant perguntará qual interface pretende usar como ponte entre a VM e o host.
-
-Digite o número correspondente à placa que utiliza para se conectar à Internet.
-
-Por exemplo,
-
-```
-0: eth0
-1: wlan0
-```
-
-Digite 0 caso utilize a placa eth0 (placa de conexão Ethernet, conexão cabeada) para se conectar à Internet;
-
-Digite 1 caso utilize a placa wlan0 (placa de Wi-Fi, conexão sem fio) para se conectar à Internet.
-
 Para acessar a API servida pelo NGINX, digite na barra de pesquisa de um navegador web:
 
-`<ip_do_servidor>:8080`
+`192.168.56.11:8080`
 
-No caso deste projeto, a pesquisa ficará assim:
+Para destruir a máquina virtual, execute:
 
-`192.168.15.55:8080`
-
-Altere o endereço IP de acordo com a sua rede no arquivo **Vagrantfile**.
+`vagrant destroy -f`
