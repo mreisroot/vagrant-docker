@@ -11,12 +11,12 @@ Vagrant.configure("2") do |config|
   # Definir hostname, SO e rede
   config.vm.hostname = "ubuntu"
   config.vm.box = "ubuntu/jammy64"
-  config.vm.network "public_network", ip: "192.168.15.55"
+  config.vm.network "private_network", ip: "192.168.56.11"
 
   # Compartilhando a pasta que contém o arquivo index.html
   config.vm.synced_folder "./site", "/site"
 
   # Provisionar VM pelo Shell
-  config.vm.provision "shell", path: "script.sh"
+  config.vm.provision "shell", path: "provision.sh"
 
 end
