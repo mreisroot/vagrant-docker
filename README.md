@@ -34,7 +34,7 @@ Para criar a máquina virtual Vagrant, execute o comando:
 
 Para acessar a API servida pelo NGINX, digite na barra de pesquisa de um navegador web:
 
-`192.168.56.11:8080`
+`192.168.56.11`
 
 Para destruir a máquina virtual, execute:
 
