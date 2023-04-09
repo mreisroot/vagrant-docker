@@ -17,4 +17,4 @@ sudo apt-get update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Criando um container do NGINX com um volume no diretório /usr/share/nginx/html, permitindo que o servidor sirva o arquivo index.html
-sudo docker container run --name viacep -dp 8080:80 -v /site:/usr/share/nginx/html:ro nginx
+sudo docker container run -dp 80:80 --mount type=bind,source=/site,target=/usr/share/nginx/html,ro --name viacep nginx
